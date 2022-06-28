@@ -1,0 +1,225 @@
+Transformations Notes
+
+Functions:
+
+translate()
+rotate()
+scale()
+
+push()
+pop()
+
+Example:
+
+rect(50, 50, 100, 50);
+
+is the same as
+
+translate(50, 50);
+rect(0, 0, 100, 50);
+
+because translate moves the point of origin
+0, 0 is now where 50, 50 was originally
+
+Translations accumulate so they apply to further shapes
+
+Need translate to control the rotation of a shape
+Rotations happens around the point of origin so need to translate this point
+
+Angle:
+
+Using degrees
+
+angleMode(DEGREES)
+
+Radians:
+
+Arc length
+-"Unit circle" is a circle with a radius of length 1
+-Create an angle, flatten and measure length to know radian
+-Calculate circumference of a circle = 2 * PI * r
+-Circumference of a "unit circle" is 2 * PI (because r = 1)
+
+push() --> save
+pop() --> restore
+
+Scale()
+
+-stretches everything out or shrinks everything relative to 0, 0
+-scale(_)
+-scale(_,_)
+-can scale the same on both x and y axis
+-or do 1 thing to the x axis and another on the y axis
+-can use negative numbers
+
+1 = 100%, default scale
+2 = object will be twice as big (200%)
+0.5 = shrunk by 50%
+
+-negative numbers flip the axis (e.g. change y to pointing down instead of up)
+
+-push() and pop() can be used to save style information e.g. stroke(), fill()
+etc.
+-can use one pop() for every push() - can only restore the same amount of
+information you've saved
+
+STACK
+-push() and pop() save information in a stack
+-push() adds to stack
+-pop() takes the last thing out
+
+QUEUE
+-The first item in queue is the first to be taken out
+
+p5.js reference
+
+https://p5js.org/reference/
+
+Transform
+
+rotateX()
+rotateY()
+rotateZ()
+
+- for the WEBGL render - 3D render for p5.js
+
+applyMatrix()
+resetMatrix()
+
+-orientation and transformation state (0, 0 in top left, rotation, scaling)
+-stored in a matrix of numbers
+
+e.g.
+1 0 0
+0 1 0
+
+2 x 3 matrix
+
+When scaled:
+2 0 0
+0 2 0
+
+-resetMatrix() - resets everything to the default state
+-applyMatrix() - create own numbers, put into an array and then apply to a
+matrix
+
+setTimeout(_ , _);
+
+2 arguments
+1st - another function
+
+e.g.
+function rainbow() {
+
+}
+
+setTimeout(rainbow , _);
+
+2nd - time in milliseconds
+
+e.g.
+setTimeout(rainbow , 2000);
+
+2000 = 2 seconds
+
+Meaning: code in raindow() will execute in 2 seconds from now
+
+Often written as an anonymous function - can add in function code to first
+argument without creating function
+
+setInterval(_ , _)
+-almost the same as setTimeout()
+-will execute function (1st argument) every time given (2nd argument)
+
+e.g.
+setInterval(rainbow() , 2000)
+
+-will execute rainbow every 2 seconds
+
+CLOSURE:
+
+function rainbow() {
+
+}
+
+function unicorn() {
+
+}
+
+is the same as
+
+var rainbow = function()
+var unicorn = function()
+
+a function is stored in a variable
+
+so a function can be defined inside another function
+
+function rainbow() {
+    function unicorn() {
+
+    }
+}
+
+-unicorn() is a local variable to rainbow()
+-can't call unicorn() outside of the rainbow()
+
+function rainbow() {
+    var counter = 0;
+
+    function unicorn() {
+
+    }
+}
+
+-counter is a local variable to the rainbow function
+
+-When rainbow() is called a counter is stored in memory
+-If rainbow() called again, a new counter is made
+-When rainbow() is called, rainbow() is also stored in memory each time
+
+9.7: Drawing Object Trails
+https://www.youtube.com/watch?v=vqE8DMfOajk&list=PLRqwX-V7Uu6ZmA-d3D0iFIvgrB5_7kB8H&index=7
+
+particle --> something moving around the screen
+-has an x and y
+-needs a history --> can be an array
+
+Vectors:
+
+var vector =
+
+createVector(_,_); --> add in x & y
+
+instead of
+
+var x = _
+var y = _
+
+Vector acts as a way to get from the origin to where an element is displayed
+
+9.8: Random Circles with No Overlap
+https://www.youtube.com/watch?v=XATr_jdh-44&list=PLRqwX-V7Uu6ZmA-d3D0iFIvgrB5_7kB8H&index=8
+
+Force-directed graph
+
+Determining if circles are overlapping:
+If distance between circles is greater than r1 + r2 = not overlapping
+If distance between circles is less than or equal to r1 + r2 = overlapping
+
+9.9: Minimum Spanning Tree (Prim's Algorithm)
+
+https://www.youtube.com/watch?v=BxabnKrOjT0&list=PLRqwX-V7Uu6ZmA-d3D0iFIvgrB5_7kB8H&index=9
+
+Minumum spanning trees
+-A series of random points
+-Connect all the points
+-How can I find the minimum distance between points
+
+Prim's Algorithm
+-Start with a random point
+-"unreached" and "unreached" vertices
+-At start all are "unreached"
+-Find point that has the least distance
+-"Reach" two vertices - must find closest between these two and a third
+-Check every "reached" vertex against every "unreached" vertex

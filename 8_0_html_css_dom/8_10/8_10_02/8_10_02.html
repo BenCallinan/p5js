@@ -1,0 +1,33 @@
+<!-- 8.10: select() and selectAll() with CSS Selectors -->
+
+<!-- https://www.youtube.com/watch?v=sSQPLIHIzmg&list=PLRqwX-V7Uu6bI1SlcCRfLH79HZrFAtBvX&index=10 -->
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.js"></script>
+  </head>
+  <body>
+    <script src="8_10_02.js"></script>
+  </body>
+
+  <body>
+      <p><input id='textB' type='text' placeholder='enter your text'></p>
+      <p class='adjust'> Font Size: </p>
+      <p><input type='range' min='1' max='64' value='44' class='slider' id='sizeSld'>
+      <p class='adjust'> Red: </p>
+      <p><input type='range' min='10' max='255' value='76' class='slider' id='redSld'>
+      <p class='adjust'> Green: </p>
+      <p><input type='range' min='10' max='255' value='0' class='slider' id='grnSld'>
+      <p class='adjust'> Blue: </p>
+      <p><input type='range' min='10' max='255' value='153' class='slider' id='bluSld'>
+      <p class='adjust'> X Position: </p>
+      <p><input type='range' min='10' max='750' value='0' class='slider' id='xSld'>
+      <p class='adjust'> Y Position: </p>
+      <p><input type='range' min='250' max='750' value='0' class='slider' id='ySld'>
+      <p id='para'> Text will show here </p>
+  </body>
+
+</html>

@@ -1,0 +1,461 @@
+COLOUR
+
+Grayscale: RGB are all the same values
+e.g. (100, 100, 100) or (100) = grey
+
+Colour functions:
+background
+fill (interior)
+stroke (outline)
+
+RBGA
+A= alpha (transparency / opacity) same 0 to 255 range
+
+(_) = grayscale
+(_, _) = grayscale + alpha
+(_, _, _) = RGB
+(_, _, _, _) = RGBA
+
+Terminal:   node filename.js (to view errors)
+
+// comments
+Highlight + command / = highlights and comments section
+
+function setup() --> happens only once
+
+function draw() --> happens in a loop
+
+Create variables
+
+1. Declare
+
+let (name variable)
+
+e.g.
+let circleX;
+
+can also use: var or const
+
+2. Initialise
+
+e.g. circleX = 100; (assignment operation)
+
+3. Use
+
+e.g. ellipse(circleX, 10, 50, 50);
+
+Incrementation Operators:
+
+let x = 100;
+
+In draw:
+
+x = x + 5;
+or
+x +=5;
+
+x = x + 1;
+or
+x += 1;
+or
+x ++;
+
+x -= 1;
+
+x *= 2;
+
+x /= 1;
+
+Random function: returns a random number between a min and a max
+
+random(_, _);
+
+arguments: min and max
+
+e.g.
+random(min, max);
+
+a float numb is returned e.g 22.345217
+
+If one argument e.g. random(50); - assumes min = 0
+
+map() function
+
+map value of one range to the value of another ranges
+
+e.g. map mouseX (range 0 to 600) to background colour (range 0 to 255)
+
+map(_, _, _, _, _);
+
+map(value, min, max, min, max);
+
+col = map(mouseX, 0, 600, 0, 255);
+
+CONDITIONAL STATEMENTS
+
+conditional logic
+
+boolean expression (true or false)
+1 = true
+0 = false
+
+Relational operators
+>
+<
+>=
+<=
+==
+
+boolean expression goes in(_)
+if true code executes
+if false code does not execute
+
+if (_) {
+
+}
+
+e.g.
+if (mouseX > 100) {
+    fill(255, 0, 0);
+}
+
+if (mouseX ==200) {
+
+}
+
+not
+
+mouseX = 200
+
+single equals (=) means an assignment operation
+
+Bouncing Ball:
+
+Want ball to turn around when it reaches the edge of the canvas
+
+if (x > width) {
+
+}
+
+ELSE, ELSE IF
+
+if (_) {
+
+} else {
+
+}
+
+
+
+if (_) {
+
+} else if (_) {
+
+} else if (_) {
+
+} else {
+
+}
+
+Order is important.
+One is executed the program moves to next line
+
+AND and OR
+
+if mouseX > 50 AND mouseX < 100
+
+Evaluates to true and the intersection
+
+
+if mouseX > 50 OR mouseX < 100
+
+ONE needs to evaluate to true for the code to execute
+
+Syntax:
+
+AND     -->     &&
+OR      -->     ||
+
+BOOLEAN VARIABLES
+
+variable = true or false
+
+var x = _
+
+mouseIsPressed is a boolean (true or false)
+    -used if mouse is being held down
+
+function mousePress is an event
+    -used in the event the mouse is clicked
+
+var on = false;
+
+function draw() {
+    if(on) {
+        set background to a colour
+    } else {
+        set background to a different colour
+    }
+}
+
+NOT     -->     !
+
+if (!on) {
+
+}
+
+on = !on
+
+WHILE AND FOR LOOPS
+
+While loop:
+
+while (TRUE) {
+    - Conintue this code over and over -
+}
+
+Initialisation:     var x = 0;
+Boolean test:       while (true)
+Incrementation:     x = x + 1;
+
+For loop:
+
+for (var x = 0, true, x = x +1)
+
+x = x + 50;
+can be written as:
+x += 50;
+
+x + x + 1;
+can be written as:
+x++
+
+NESTED LOOPS
+
+function draw() {
+    for(){
+        ellipse()  --> repeats the ellipse function
+    }
+}
+
+Canvas not updated until the end of draw() is reached
+
+function draw() {
+    for (var x = 0, ...){
+        for (var y = 0, ...)
+    }
+}
+
+5. 1FUNCTIONS
+
+ellipse(100, 100, 50, 50); --> calling a function
+
+function setup() {
+
+} --> defining a function
+
+(both are p5.js functions)
+
+Functions provide:
+
+1. Modularity
+
+2. Reusability (arguments / paramaters)
+
+Declare a function:
+
+function functionName() {
+
+}
+
+5.2 FUNCTION PARAMETERS AND ARGUMENTS
+
+functionName(_,_,_) --> arguments are inside brackets
+
+function functionName(paramaters) {
+
+}
+
+Parameters are essentially variables
+Parameters are local to the function
+Parameters get value from where you call the function
+
+FUNCTIONS AND RETURN
+
+e.g. random() --> returns a function - the random number
+
+function functionName(parameters) {
+    ...
+    ...
+    ...
+    return ___ ;
+}
+
+OBJECT ORIENTATED PROGRAMMING
+
+Encapsulation
+
+-What properties does something have?
+-What does it do?
+
+Class:  template or blueprint
+
+e.g.
+class Bubble {
+
+}
+--> encapsulation
+--> data and functionality into an object
+
+Don't have to write code for class in setup and draw
+
+Setup:
+Bubble = new Bubble() --> instance
+
+new --> constructs an object
+
+Draw:
+Bubble.move()
+
+class className {
+    constructor() {
+    --> objects setup
+    e.g.
+    this.x = 100;
+    this.y = 100;
+    }
+    --> Bubble.mov is in draw so we need to declare in class
+    move() {
+        this.x = this.x + _;
+    }
+}
+
+ARRAYS
+
+var variableName = [5, 3];
+
+Array is a list of values, separated by a comma embedded in square brackets
+Array elements are indexed - the order matters
+
+e.g.
+[50, 71, 12, -22];
+
+This arrays has 4 elements. Index values are 0, 1, 2, 3
+
+nums[2] = 12
+
+ARRAYS AND LOOPS
+
+for (var i = 0; i < x; i++) {
+
+}
+
+Start at 0
+Is i less than x?
+If yes perform task
+If no exit the loop
+
+ARRAYS OF OBJECTS
+
+let nameofArray = [];
+
+for (let i = 0, i < _, i++) {
+    nameofArray[i]
+}
+
+MOUSE INTERACTION WITH OBJECTS
+
+How do I click the mouse inside an object?
+
+dist(x1, y1, x2, y2)
+
+cx, cy = centre of a circle
+
+mx, my = where the mouse clicked
+
+dist(cx, cy, mx, my) = distance of line between points (d)
+
+r of circle = d of where to click inside circle
+
+REMOVING OBJECTS FROM ARRAYS
+
+push() --> adds object to the end of an array
+pop() --> removes something from the end of an array
+splice() --> changes contents of an array by adding/removing elements
+
+splice(index, how many)
+
+e.g.
+splice(2, 1) --> removes element 2 from the array
+
+array = [A, B, C, D] --> 4 elements
+
+splice(2, 1) ---> removes "C"
+
+array = [A, B, D] --> 3 elements
+
+Need to be careful all elements are checked
+
+0: A, 1: B, 3: C: 4: D, 5: 4
+becomes
+0: A, 1: B, 3: D, 4: E
+
+Next element is checked, therefore D is skipped
+
+Solution:
+Start at end: instead of
+(let i = 0; i < array.length; i++)
+it is:
+(let i = array.length -1; i >= 0; i--)
+
+Javascript docs:
+
+Mozilla Foundation
+Javascript
+
+https://developer.mozilla.org/en-US/docs/Web/javascript
+
+OBJECT COMMUNICATION
+
+Are two object intersecting?
+
+For circles:
+What is the distance between two circles?
+
+distance is > radius1 + radius2 = circles NOT overlapping
+
+distance is < radius1 + radius2 = circles overlapping
+
+dist(x1, y1, x2, y2)
+if dist < r1 + r2
+
+if (object1.intersects(object2) {
+
+}
+
+Are many object intersecting?
+
+4 Bubbles:  A, B, C, D
+
+A intersecting B, C, D
+B intersecting A, C, D
+C intersecting A, B, D
+D intersecting A, B, C
+
+Optomise to ensure bubbles does not check itsef (e.g. A doesn't check A)
+
+Many checks will slow down the program
+
+bubbles     -->         checks
+3                       9
+10                      100
+100                     10,000
+1000                    1,000,0000
+
+OBJECTS AND IMAGES
+
+image(name of image, x, y, w, h)
+
+'+' operator
+Add numbers:            2 + 2 = 4
+Concatenates strings:   A + B = AB

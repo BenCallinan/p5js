@@ -1,0 +1,230 @@
+HTML / CSS / DOM
+
+HTML - HyperText Markup Language
+
+<html> - html tag
+
+    <body>
+        <h1> Title of page </h1>
+        <p> This is a paragraph. </p>
+        <imag src = "apple.jpg">
+    </body>
+
+</html> - end html tag
+
+On the webpage:
+
+-----------------------
+Title of page
+This is a pagragraph.
+
+(picture of an apple)
+
+-----------------------
+
+CANVAS is inserted on the webpage using createCanvas
+
+Javascript adds elements (change, user interaction etc) to a webpage
+
+HTML follows a tree structure
+
+-HTML is the root
+
+-Inside HTML there is a body
+-Inside the body is the header, pagragraph, image etc
+
+-Inside HTML there is head
+-Inside head there are scripts (e.g. Javascript)
+
+DOM - Document Object Model
+
+DOCUMENT - HTML code
+OBJECT - head, body, head, paragraph, image etc.
+MODEL - Structure of organisation
+
+DOM manipulation - use javascript to manipulate these elements in real time
+
+Create functions in p5.js
+
+createCanvas() --> makes a canvas appear on the page
+createP()
+createDiv()
+createButton()
+createImg()
+
+etc.
+
+https://p5js.org/reference/#group-DOM
+
+-All will need an argument in the parenthesis
+
+-NO createH1() - can't cater for every html tag
+
+createElement(_,_)
+-Two arguments
+-1: Tag
+-2: Content of the tag
+
+Layout & Styling
+-position() - applies absolute positioning to an element
+-html() - content appearing in that element
+
+-Call on the object associated with the element
+-Use create functions
+    -they hold information about the element
+    -allow you to execute functions on that element
+
+__.position
+
+__.html
+
+__.style
+
+__ = name of object
+
+Handing DOM Events with CALLBACKS
+
+createButton() - adds a button to the page
+    (can also add a button in the html file)
+
+-want something to happen on the canvas when button is pressed
+
+-Action "callback" to function when taken
+
+e.g. button pressed --> callback --> changeColor()
+
+references createButton() but storing in a variable
+
+Then call:
+
+button.mousePressed(); <-- callback will be what is in the parenthesis
+
+(uses the p5.dom.js library)
+
+SLIDER
+
+createSlider(_, _, _);
+
+-Default html slider element
+-Can add the slider using html tags in the html
+-3 values:
+    -Minimum output
+    -Maximum output
+    -Starting value
+
+value() --> pulls out the current value of the slider
+
+TEXT INPUT FIELD
+
+-A box where a user can type text
+
+createInput()
+
+value() --> pulls out the value of the input
+
+OTHER EVENTS AND INPUTS
+
+var button = createButton();
+
+button.mousePressed(_); --> callback in the brackets
+
+button.mousePressed(functionname());
+
+function functionname() {
+
+}
+
+Others:
+mouseOver()
+mouseOut()
+changed()
+input()
+
+change() & input()
+
+2 events:
+input()     -Anytime the value changes (e.g. moving the slider)
+change()    -Anytime action of changing value finishes
+            (e.g. moving the slider + releasing the mouse)
+
+CSS:
+
+File to load p5.js project: index.html
+    --> refers to:
+            javascript code
+            p5.js library
+
+    Uses these files to add elements to the page
+
+HTML - structure / initial content
+Javascipt - behaviour
+
+CSS - Cascading Style Sheets
+- the style (visual look and feel) of the page
+
+add an additional files: filename.css (e.g. style.css)
+
+Selector: what are the things you want to select to style?
+    -all the paragraphs?
+    -one paragraph?
+    -the canvas?
+
+e.g. want to select all the paragraphs on the page
+
+p {
+    _:_;
+    _:_;
+    _:_; --> name value pairs --> whats the property and what's the values
+}
+
+Examples of selectors:
+- tag - all members of a tag type e.g. p applies to all paragraphs
+- id - a single DOM element
+    <p id = 'unicorn'> --> unicorn is an attribute
+
+    id --> indicated with a # symbol
+
+    #unicorn {
+        _:_;
+        _:_;
+        _:_;
+    }
+
+- class - a group of elements
+    -used to combine together
+    -can be multiple kinds of elements
+    -indicated with a .
+
+    <p class = 'rainbow'>
+
+class overrides tag and id overrides class
+
+How to do in javascript:
+
+var element = select('#unicorn');
+
+element ___();
+
+or
+
+var element = selectAll('p'); --> creates an array [p, p, p, p]
+
+'this' --> when written into a function,
+            refers to the DOM element that the event is attached to
+
+html (parent) --> body (child)
+body (parent) --> p (child)
+p (parent) --> image (child)
+
+How can I attach a canvas as a child to a parent element?
+function called parent(); --> use element id
+
+-An element can only have one parent, so no # needed
+
+createImg() function in p5.js
+    creates -->
+    <img src='___'> in html
+
+Sine Waves
+
+-Angle between 1 and -1
