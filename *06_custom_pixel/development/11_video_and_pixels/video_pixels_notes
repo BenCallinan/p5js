@@ -1,0 +1,94 @@
+11. Video and Pixels
+
+https://www.youtube.com/watch?v=bkGf4fEHKak&list=PLRqwX-V7Uu6aKKsDHZdDvN6oCJ2hRY_Ig&index=1
+
+11.1: Live Video and createCapture()
+
+createCapture(VIDEO) --> captures webcam feed
+
+-Part of the p5.js DOM library
+
+-creates a video DOM element which contains the image from the camera
+-can be a seperate element
+or
+-on the canvas so animation or other visual elements can be added
+
+-Need to enable https:// to use to allow webcam access if used on website
+
+11.3: The Pixel Array - p5.js Tutorial
+
+https://www.youtube.com/watch?v=nMUMZ5YRxHI&list=PLRqwX-V7Uu6aKKsDHZdDvN6oCJ2hRY_Ig&index=3
+
+get() and set() functions
+
+e.g. get(4, 2) --> gets pixel located at 4,2 (x, y)
+
+-Pixel array - array with numbers that corresponds with all the colours in the canvas
+
+-How do you find a particular pixel in that array?
+
+In the pixel array:
+
+[R, G, B, A] --> for each pixel on the canvas
+
+-R refers to red values
+-G refers to green values
+-B refers to blue values
+-A refers to alpha
+
+- 60pixels = length 240 array
+
+-Each 4 pixel values are seperated by 4 index places
+
+-For x, y coordinate x + (y * width)
+
+e.g.
+(4, 2) --> 4 + (2 * 6) = 16
+16 is the where the pixel is on the canvas
+
+    0  1  2  3  4  5
+0   0  1  2  3  4  5
+1   6  7  8  9  10 11
+2   12 13 14 15 16 17
+3   18 19 20 21 22 23
+4   24 25 26 27 28 29
+
+x + (y * width) = pixel location
+
+-Pixel location * 4 = location of pixel values on the array
+
+16 * 4 =    64
+
+(4, 2)
+R = 64
+G = 65
+B = 66
+A = 67
+
+11.7: Slit-Scan Video
+
+https://www.youtube.com/watch?v=YqVbuMPIRwY&list=PLRqwX-V7Uu6aKKsDHZdDvN6oCJ2hRY_Ig&index=7
+
+copy() function
+
+copy(_,_,_,_,_,_,_,_,_); --> 9 arguments
+
+1. The thing you want to copy from
+2. - 5. The rectangle that you want to copy from
+6. - 9. The rectangle that you want to copy to
+
+-Allows you to transform / stretch image
+
+11.8: Video Effects with Seriously.js
+
+https://www.youtube.com/watch?v=jdKep6jo7b0&list=PLRqwX-V7Uu6aKKsDHZdDvN6oCJ2hRY_Ig&index=8
+
+seriously.js
+-requires a source
+-requires a target
+-an effect goes between the two
+
+video = source
+canvas = target
+
+-effect can be changed in realtime

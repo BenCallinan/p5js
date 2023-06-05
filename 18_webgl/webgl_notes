@@ -1,0 +1,77 @@
+WebGL notes
+
+WebGL
+-Web = world wide Web
+-GL = graphics library
+
+-Comes from OpenGL
+-OpenGL is hardware accelerated - means it uses the graphics card (GPU)
+-P3D mode in processing uses OpenGL
+-Open Frameworks (C++) used OpenGL
+-etc.
+
+-WebGL is a standard for doing OpenGL in the browser
+
+-three.js is an example of a WebGL library
+
+-With p5.js - can you turn a 2D sketch into a 3D sketch and add extra functionality.
+
+To enable webGL is p5.js:
+
+createCanvas(_,_) --> default 2D graphics context
+
+if
+
+createCanvas(_,_,WEBGL) --> becomes a 3D context
+
+Adds new features:
+-3D geometry
+-Camera
+-Texture
+-Material
+-Lights
+
+Material and Lights
+https://www.youtube.com/watch?v=k2FguXvqp60&list=PLRqwX-V7Uu6bPhi8sS1hHJ77n3zRO9FR_&index=3
+
+-Material describes the skin of an object
+    -how does it behave when light shines on it
+
+-normalMaterial() - assigns a colour based on the normal vectors (x, y, z) values
+    -assigns r,g,b colours based on x,y,z values
+
+Camera and perspective
+https://www.youtube.com/watch?v=BW3D9WwalQE
+
+The important functions:
+camera();
+perspective();
+ortho();
+
+Camera - need to define the position of the camera
+-Camera distance from scene (x, y, z)
+-Where the camera is pointing (x, y, z)
+-Need to define a vector to point up (x, y, z)
+
+Perspective
+-How the illusion of a 3D view is defined
+-Field of view - like a cone pointing from the camera to the scene
+    -defined the clipping plane
+    -aspect ratio (tied to aspect ratio of the canvas)
+
+Ortho
+-Makes all objects sam size, no matter the distance from the camera
+-Clipping plane (near / far), relative to the camera
+
+3D Custom Shapes
+https://www.youtube.com/watch?v=DZlw-IS5OkI&list=PLRqwX-V7Uu6bPhi8sS1hHJ77n3zRO9FR_&index=8
+
+vertex(x, y, z);
+-When using a jpg as a texture need to define which pixels of the custom shape
+go with which pixel of the the jpg
+
+so:
+
+-vertex(x, y, z, u, v); --> u, v, coordinates are pixel mapping
+-normalised by default - corners are: (0,0), (1,0), (1,1), (0, 1)
+    -no matter the size of the image 

@@ -1,0 +1,48 @@
+Coding Challenge #85: The Game of Life
+
+https://www.youtube.com/watch?v=FWSR_7kZuYg
+
+Cellular Automata
+-system of cells that exist in a grid (1D, 2D, 3D)
+
+Game of Life
+-cellular automata in 2D
+-Generations
+    -compute cells on a grid (generation 0)
+    and generate new cells on the grid (generation 1)
+-All cells have a state (GoL = two states)
+    -0,1
+    -on / off
+    -alive / dead
+
+-New state of cell based on state during previous generation
+-and neighbours state during previous generation
+-neighbours are 8 other cells surrounding a cell
+-decided by the RULES - which are design to resemble a biological process
+
+https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life
+
+if cell is 0 (dead)
+    -will change to 1 (alive) if 3 alive neighbours
+
+if cell is 1 (alive)
+    -will change to 0 (dead) unless it has
+        < 2 alive neighbours
+        or
+        > 3 alive neighours
+
+Modulas (%)
+https://www.youtube.com/watch?v=r5Iy3v1co0A
+
+-Gives you the remainder of division
+
+9 + 1 % 10 = 0
+
+Variants:
+-Make each cell an object
+-Colours based on history of the system
+-Allow user to draw with the mouse -to set cells on
+-Create certain kinds of patterns
+-Edges in a different way
+-Average of floating point numbers rather than 0, 1
+-Change rules / visualise system in a different way

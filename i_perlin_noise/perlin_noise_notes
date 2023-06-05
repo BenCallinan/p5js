@@ -1,0 +1,34 @@
+* Perlin Noise*
+
+2 important functions:
+
+random(_,_);
+noise(_);
+
+-Really noise means random
+
+-Noise function refers to 'Perlin Noise'
+-Named after Ken Perlin --> developed for film Tron.
+-Perlin noise was developed for procedural textures of objects
+
+-Noise function gives you perlin noise values
+
+Perlin noise in ONE DIMENSION
+
+-Random numbers between 0 and 1, across time (x-axis)
+    -Gives you smooth random numbers
+    -Next number picked is related to the previous number
+
+-Wave forms a halved and added together
+
+Calling the noise function:
+
+random(min, max); --> can give a min and max argument
+
+noise(); --> use xoff, to give a position on the x-axis
+
+Perlin noise in TWO DIMENSIONS
+
+-Can represent as a grid
+
+-noise(xoff, yoff); --> a x and a y location in a grid space

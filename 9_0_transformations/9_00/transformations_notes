@@ -223,3 +223,56 @@ Prim's Algorithm
 -Find point that has the least distance
 -"Reach" two vertices - must find closest between these two and a third
 -Check every "reached" vertex against every "unreached" vertex
+
+2D Array:
+
+-Array with 2 coordinates e.g. (3,1) - grid structure
+-In computer memory is an array of arrays
+
+Grid:
+
+0   1   2   3
+1   2   3   0
+2   3   0   1
+3   0   1   2
+
+Computer:
+[{0, 1, 2, 3}, {1, 2, 3, 0}, {2, 3, 0, 1}, {3, 0, 1, 2}]
+
+Polar coordinates
+https://www.youtube.com/watch?v=N633bLi_YCw&list=PLRqwX-V7Uu6ZmA-d3D0iFIvgrB5_7kB8H&index=20
+
+-Point (x, y)
+-Angle relative to point (angle)
+-How to find 2nd point based on angle and distance
+-Need a formula to convert from polar to cartesian (x, y)
+-Need to use trigometric functions
+
+-Know: (x1,y1), theta (angle), r
+-Want to know 2nd point (x2, y2)
+
+-If know dx (delta x = change in x) and (dy = change in y)
+
+x1 + dx = x2
+y1 + dy = y2
+
+sin(theta) = dy / r     or  dy = r * sin(theta)
+cos(theta) = dx / r     or  dy = r * cos(theta)
+
+Custom Shapes
+https://www.youtube.com/watch?v=76fiD5DvzeQ&list=PLRqwX-V7Uu6ZmA-d3D0iFIvgrB5_7kB8H&index=22
+
+-To create a polygon - defined by its vertices (points that connect the sides)
+
+Use function:
+
+beginShape();
+vertex(_,_);
+vertex(_,_);
+...
+endShape();
+
+curveVertex(_,_); --> curves edges
+
+-Curves require additional points that control the entry and the exit of the curve
+-Catmull-Rom Spline

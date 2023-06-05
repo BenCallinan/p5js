@@ -1,0 +1,164 @@
+Topics of JavaScript / ES6
+
+16.1: let vs var
+
+https://www.youtube.com/watch?v=q8SHaDQdul0&list=PLRqwX-V7Uu6YgpA3Oht-7B4NBQwFVe3pr
+
+2015 --> ES6 or ECMAScript 2015
+
+var x = 100;
+    -functionscope
+    -hoisting
+
+let x = 100;
+    -blockscope
+
+const x = 100;
+    -if variable will never change
+    -good for memory management
+    -also uses blockscope
+
+16.2: const
+
+https://www.youtube.com/watch?v=2iLVFyYwyRA&list=PLRqwX-V7Uu6YgpA3Oht-7B4NBQwFVe3pr&index=2
+
+function go() {}
+
+is the same as
+
+var go = function() {};
+let go = function() {};
+const go = function() {};
+
+16.3: ES6 Arrow Function
+
+https://www.youtube.com/watch?v=mrYMzpbFz18&list=PLRqwX-V7Uu6YgpA3Oht-7B4NBQwFVe3pr&index=3
+
+ES5:
+function (arguments) {}; --> anonymous function
+
+ES6:
+(arguments) => {}; --> parenthesis () and brackets {} are optional in many cases
+
+e.g
+x => x * 2
+
+is the same as:
+
+function (x) {
+    return x * 2;
+}
+
+Useful for map(), reduce(), filter()
+
+this --> crucial word for JavaScript
+
+16.5: Higher Order Functions in JavaScript
+
+https://www.youtube.com/watch?v=H4awPsyugS0&list=PLRqwX-V7Uu6YgpA3Oht-7B4NBQwFVe3pr&index=6
+
+Higher Order function
+
+-Can take another function as an argument
+-Can return another function
+
+-Many higher order functions available for arrays
+map() --> makes a new array
+sort() --> sorts an existing array
+reduce() --> special case
+filter() --> makes a new array
+fill() --> fills an existing array
+
+    -These functions will return a new array
+
+Ternary operator
+
+Instead of:
+
+if (a > b) {
+    return a;
+} else {
+    return b;
+}
+
+ternary operator
+
+(a > b)? a:b
+
+PROMISES
+
+-A promise is an object
+
+loadJSON(url, callback);
+
+or
+
+let promise = loadJSON(url);
+
+-Javascript native code:
+
+let promise = fetch(url);
+
+-Will create a promise
+-Promise is an object that can be in certain states:
+    1. pending - waiting to get data back
+    2. fulfilled - data successfully returned
+    3. rejected - an error has happened
+
+-Don't need to query promise continuously
+-use
+    then() -receives function to be executed if/when promise is fulfilled
+    or
+    catch() -received function to be executed if/when promise is rejected
+
+How to make a promise?
+-Provide pathways:
+    -resolve
+    -rejection
+
+16.17: Inheritance in JavaScript
+
+https://www.youtube.com/watch?v=MfxBfRD0FVU&list=PLRqwX-V7Uu6YgpA3Oht-7B4NBQwFVe3pr&index=19
+
+Inheritance
+
+-3 core principles of object orientated programming
+    1. encapsulation
+    2. inheritance
+    3. polymorphism
+
+e.g.
+
+class Particle {
+    constructor() {
+
+    }
+}
+
+Somewhere else:
+
+p = new Particle()
+
+new - means execute constructor function
+
+-class is a template
+
+-extends is a keyword which allows a class to inherit from another class
+
+-constructor() is a special case
+-other functions (e.g. update(), show()) are inheritable
+
+"child" or "sub" clas inherits from the "parent" or "super" class
+
+super() - executes something from the "parent" class
+
+Inheritance class
+
+e.g.
+class Animal - has properties all animals share
+    --> class mammal
+            --> canine
+    --> class reptile
+            --> snake
+
+-Can inherit properties from all the way up the tree

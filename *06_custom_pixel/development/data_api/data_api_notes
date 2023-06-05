@@ -1,0 +1,20 @@
+Working with data and APIs in javascript
+
+1.1: fetch() - Working With Data & APIs in JavaScript
+
+https://www.youtube.com/watch?v=tc8DU14qX6I&list=PLRqwX-V7Uu6YxDKpFzf_2D84p0cyk4T7X&index=4
+
+Fetch()
+
+1. Call fetch(_) --> 1 argument, the path to the resource
+                        e.g. file
+2. Response -> a promise -> happen asynchronously - resolved when event is over
+                                                    and data is retrieved
+    -receives data from resource
+        -text
+        -blob (image)
+        -JSON (JavaScript Object Notation) -> format for storing data
+
+3. Complete data stream -> grabs the data in the "body" of the response
+
+4. Do something --> e.g. make <img> HTML DOM element

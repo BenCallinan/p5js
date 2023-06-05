@@ -1,0 +1,71 @@
+10: Working with data
+
+10.1: Introduction to Data and APIs in JavaScript
+
+https://www.youtube.com/watch?v=rJaXOFfwGVw&list=PLRqwX-V7Uu6a-SQiI4RtIwuOrLJGnel0r&index=1
+
+Data formats:
+CSV (tabular data)
+XML
+JSON (JavaScript Object Notation)
+Text File
+PDF
+on web page
+
+What is an API?
+
+Application Programming Interface
+
+-Allows for communication between applications
+
+10.2: What is JSON? Part I
+
+https://www.youtube.com/watch?v=_NFkzw6oFtQ&list=PLRqwX-V7Uu6a-SQiI4RtIwuOrLJGnel0r&index=2
+
+To add json data to a js file:
+
+loadJSON();
+
+Also:
+
+loadImage();
+loadTable();
+
+etc.
+
+10.4: Loading JSON data from a URL (Asynchronous Callbacks!)
+
+https://www.youtube.com/watch?v=6mT3r8Qn1VY&list=PLRqwX-V7Uu6a-SQiI4RtIwuOrLJGnel0r&index=4
+
+Asynchronous Callbacks
+
+loadJSON(_,_)
+
+--> first argument is the URL for the data
+--> second argument is a callback function
+
+-add parameter to call callback function definition
+--> gotData(_) --> parameter is in parenthesis, p5.js will fill function with data
+
+10.5: Working with APIs in Javascript
+
+https://www.youtube.com/watch?v=ecT42O6I_WI&list=PLRqwX-V7Uu6a-SQiI4RtIwuOrLJGnel0r&index=6
+
+Query string
+
+url example:
+
+openweather.org/?city=London&_=_
+
+city=London --> name value pairs
+
+Multiple queries are strung together with an ampersand
+
+10.7: API Query with JavaScript setInterval()
+
+https://www.youtube.com/watch?v=UNtqhnhD-wo&list=PLRqwX-V7Uu6a-SQiI4RtIwuOrLJGnel0r&index=7
+
+setTimout --> triggers an event once at ___ time
+setInterval --> triggers an event over and over every ___ time
+
+setInterval(_,_) --> callback, milliseconds 
