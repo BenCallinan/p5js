@@ -1,0 +1,133 @@
+/* body {
+    height: 100vh;
+    margin: 0;
+    max-width: 900px;
+    font-family: Roboto, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-evenly;
+    flex-shrink: 0;
+    color: #000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 54px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 20px;
+}
+
+.emojis {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    gap: 52px;
+    margin: 32px;
+}
+
+.image img {
+    background: white;
+    width: 100px;
+    height: 100px;
+}
+
+.number {
+    font-size: 36px;
+    text-align: center;
+    margin: 10px;
+}
+
+.result {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+}
+
+.restext {
+    padding-top: 30px;
+    margin-right: 20px;
+    font-size: 36px;
+}
+
+.resemoji img {
+    background: white;
+    width: 100px;
+    height: 100px;
+} */
+
+body {
+    height: 100vh;
+    margin: 0;
+    max-width: 900px;
+    font-family: Roboto, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-evenly;
+    max-width: 700px;
+    flex-shrink: 0;
+    color: #000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 3em;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin: 20px;
+}
+
+.emojis {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    max-width: 700px;
+    gap: 4em;
+    margin: 2em;
+}
+
+.image img {
+    background: white;
+    width: 75px;
+    height: 75px;
+}
+
+.number {
+    font-size: 2em;
+    text-align: center;
+    margin: 10px;
+}
+
+.result {
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -2em;
+    margin-bottom: -2em;
+}
+
+.restext {
+    padding-top: 20px;
+    margin-right: 20px;
+    font-size: 2em;
+}
+
+.resemoji img {
+    background: white;
+    width: 75px;
+    height: 75px;
+}
+
+button {
+    height: 4em;
+    font-size: 2em;
+    border: none;
+    background-color: white;
+}

@@ -1,0 +1,67 @@
+.rps {
+    display: flex;
+    flex-direction: column;
+}
+
+.pics {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    max-width: 1800px;
+    padding-top: 20px;
+}
+
+.names {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 20px;
+    font-family: sans-serif;
+    font-size: 32px;
+    max-width: 1800px;
+}
+
+.scoreName {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 20px;
+    font-family: sans-serif;
+    font-size: 32px;
+}
+
+.scoreNum {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 20px;
+    font-family: sans-serif;
+    font-size: 32px;
+}
+
+.choices {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 20px;
+    font-family: sans-serif;
+    font-size: 32px;
+}
+
+#winner {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 20px;
+    font-family: sans-serif;
+    font-size: 32px;
+}
+
+#result {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 20px;
+    font-family: sans-serif;
+    font-size: 32px;
+}
